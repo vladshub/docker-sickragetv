@@ -2,6 +2,7 @@ FROM python:2.7.10
 MAINTAINER Vladislav Shub <vlad6il@gmail.com>
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV PYTHONIOENCODING utf-8
 ENV SICKRAGE_VERSION 6.0.25
 
 RUN curl -L "https://github.com/SiCKRAGETV/SickRage/archive/$SICKRAGE_VERSION.tar.gz" | tar xz && \
@@ -16,4 +17,4 @@ RUN pip install --upgrade pip && \
 
 EXPOSE 8081
 
-CMD ["python", "/sickrage/SickBeard.py", "--install-optional", "--datadir=/data/sickrage", "--config=/data/sickrage/sickrage.ini"]
+CMD ["python", "/sickrage/SickBeard.py", "--install-optional", "--datadir=/sickrage", "--config=/sickrage/sickrage.ini"]

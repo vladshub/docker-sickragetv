@@ -15,7 +15,7 @@ RUN pip install --upgrade pip && \
  pip install --upgrade dogpile.cache && \
  pip install --upgrade configobj
 
-RUN python /sickrage/SickBeard.py --nolaunch --install-optional --datadir=/data --config=/config/sickrage.ini --user -d && sleep 120 && echo $(killall python || exit 1)
+RUN python /sickrage/SickBeard.py --nolaunch --install-optional --datadir=/data --config=/config/sickrage.ini --user -d && sleep 120 && echo $(killall python || exit 0)
 
 EXPOSE 8081
 

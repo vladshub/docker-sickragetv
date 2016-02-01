@@ -17,4 +17,4 @@ RUN pip install --upgrade pip && \
 
 EXPOSE 8081
 
-CMD ["python", "/sickrage/SickBeard.py", "--install-optional", "--datadir=/data", "--config=/data/sickrage.ini"]
+CMD ["python", "/sickrage/SickBeard.py", "--install-optional", "--datadir=/data", "--config=/config/sickrage.ini"]

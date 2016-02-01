@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV PYTHONIOENCODING utf-8
 ENV SICKRAGE_VERSION 6.0.30
 
-RUN curl -L "https://github.com/SiCKRAGETV/SickRage/archive/$SICKRAGE_VERSION.tar.gz" | tar xz && \
+RUN curl -s -L "https://github.com/SiCKRAGETV/SickRage/archive/$SICKRAGE_VERSION.tar.gz" | tar xz && \
  mv SickRage-$SICKRAGE_VERSION /sickrage
 
 WORKDIR /sickrage

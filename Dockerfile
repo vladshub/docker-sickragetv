@@ -17,6 +17,8 @@ RUN curl -s -L "https://github.com/SiCKRAGETV/SickRage/archive/$SICKRAGE_VERSION
 
 WORKDIR /sickrage
 
-RUN python /sickrage/SickBeard.py --nolaunch --install-optional --datadir=/data --config=/config/sickrage.ini --user -d || echo 0
+RUN pip install --upgrade -r requirements/global.txt && \
+  pip install --upgrade -r requirements/ssl.txt && \
+  pip install --upgrade -r requirements/optional.txt
 
 CMD ["python", "/sickrage/SickBeard.py", "--nolaunch", "--install-optional", "--datadir=/data", "--config=/config/sickrage.ini", "--user"]

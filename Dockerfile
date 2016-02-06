@@ -13,7 +13,7 @@ RUN pip install --upgrade pip && \
 ENV SICKRAGE_VERSION 6.0.55
 
 RUN curl -s -L "https://github.com/SiCKRAGETV/SiCKRAGE/archive/$SICKRAGE_VERSION.tar.gz" | tar xz && \
- mv SickRage-$SICKRAGE_VERSION /sickrage
+ mv SiCKRAGE-$SICKRAGE_VERSION /sickrage
 
 WORKDIR /sickrage
 

@@ -22,4 +22,4 @@ RUN pip install --upgrade -r sickrage/requirements/requirements.txt && \
   pip install --upgrade -r sickrage/requirements/ssl.txt && \
   pip install --upgrade -r sickrage/requirements/optional.txt
 
-CMD ["python", "/sickrage/SickBeard.py", "--nolaunch", "--install-optional", "--datadir=/data", "--config=/config/sickrage.ini", "--user"]
+CMD ["python", "/sickrage/SickBeard.py", "--nolaunch", "--install-optional", "--datadir=/data", "--config=/config/sickrage.ini"]

@@ -4,6 +4,7 @@ MAINTAINER Vladislav Shub <vlad6il@gmail.com>
 RUN apk add --update libffi-dev && rm -rf /var/cache/apk/*
 
 EXPOSE 8081
+COPY ./entrypoint.sh /
 
 ENV SICKRAGE_VERSION 6.0.55
 
@@ -24,5 +25,4 @@ RUN . /env/bin/activate \
   && /env/bin/pip install --upgrade -r sickrage/requirements/ssl.txt 
 #  && /env/bin/pip install --upgrade -r sickrage/requirements/optional.txt
 
-
-CMD [". /env/bin/activate && /env/bin/python", "/sickrage/SickBeard.py", "--nolaunch", "--datadir=/data", "--config=/config/sickrage.ini"]
+ENTRYPOINT ["/entrypoint.sh"]

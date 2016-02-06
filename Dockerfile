@@ -10,7 +10,7 @@ RUN pip install --upgrade pip && \
  pip install --upgrade dogpile.cache && \
  pip install --upgrade configobj
 
-ENV SICKRAGE_VERSION 6.0.30
+ENV SICKRAGE_VERSION 6.0.55
 
 RUN curl -s -L "https://github.com/SiCKRAGETV/SickRage/archive/$SICKRAGE_VERSION.tar.gz" | tar xz && \
  mv SickRage-$SICKRAGE_VERSION /sickrage

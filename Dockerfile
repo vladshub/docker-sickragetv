@@ -5,7 +5,7 @@ ENV SICKRAGE_VERSION 6.0.55
 EXPOSE 8081
 
 RUN wget -q "https://github.com/SiCKRAGETV/SiCKRAGE/archive/$SICKRAGE_VERSION.tar.gz" \
-  && tar xzvf *.tar.gz && rm *.tar.gz \
+  && tar xzf *.tar.gz && rm *.tar.gz \
   && mv SiCKRAGE-* /sickrage 
 
 RUN virtualenv /env

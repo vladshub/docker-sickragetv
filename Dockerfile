@@ -20,6 +20,6 @@ RUN . /env/bin/activate \
   && /env/bin/pip install git+https://github.com/sebastiaansamyn/python-fanart \
   && /env/bin/pip install --upgrade dogpile.cache \
   && /env/bin/pip install --upgrade configobj \
-  && /env/bin/pip install --upgrade -r sickrage/requirements.txt
+  && /env/bin/pip install --upgrade -r /sickrage/requirements.txt
 
 ENTRYPOINT ["/entrypoint.sh"]

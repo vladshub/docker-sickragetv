@@ -6,7 +6,7 @@ RUN apk add --no-cache --update libffi-dev && rm -rf /var/cache/apk/*
 EXPOSE 8081
 COPY entrypoint.sh /
 
-ENV SICKRAGE_VERSION v8.7.8
+ENV SICKRAGE_VERSION v8.8.4
 
 RUN wget -q "https://github.com/SiCKRAGETV/SiCKRAGE/archive/$SICKRAGE_VERSION.tar.gz" \
   && tar xzf *.tar.gz && rm *.tar.gz \
